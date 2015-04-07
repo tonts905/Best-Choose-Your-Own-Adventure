@@ -30,6 +30,16 @@ def intro():
     else:
         intro()
 
+def restart():
+    choice = simpledialog.askinteger("Restart",
+                            "Would you like to do the adventure again?\n\nYes (1)\nNo (2)")
+    if (choice == 1):
+         intro()
+    elif (choice == 2):
+         root.destroy()
+    else:
+         restart()
+            
 ################ Joseph's Fuctions #####################
 def choice1():
     choice = simpledialog.askinteger("Choose wisely",
@@ -65,17 +75,30 @@ def choiceMoney1():
                             "You die because of the intense heat and radiation.")
         messagebox.showinfo("Ending",
                             "You reached Ending 1 of 13 endings. Ending Type: Death")
-
+        restart()
     elif (choice == 2):
-        messagebox.showinfo("The Town",
+        choiceMoney2()
+    else:
+        choiceMoney1()
+
+def choiceMoney2():
+     messagebox.showinfo("The Town",
                             "You walk back from where you came, but you cannot see\n"
                             "where you are. After a long walk you see a small town built\n"
                             "out of steel and spare parts from a fighter jet. Houses are\n"
                             "almost favela in their appearance.")
-    else:
-        choice2()
-
-def choice
+     choice = simpledialog.askinteger("Sheriff",
+                                      "You enter the town. The town sheriff walks up to you and\n"
+                                      "asks you what you are doing around here.\n\n"
+                                      "Say you are here for supplies. (1)\n"
+                                      "Say you are looking for work. (2)")
+     if (choice == 1):
+         choiceSupplies()
+     if (choice == 2):
+         choiceWork()
+     else:
+         choiceMoney2()
+    
 
 ################ Main #####################
 intro()

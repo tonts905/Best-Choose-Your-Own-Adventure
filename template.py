@@ -1,5 +1,5 @@
 # template.py
-# by SpamBot
+# by BJS
 # Description: Template for our CYOP
 
 # Import Statements
@@ -18,10 +18,11 @@ w.pack()
 
 def intro():
     """ Introductory Function -> starts the story going """
-    messagebox.showinfo("Title", "\nHello, you are a _____ from ____. " + \
-                        "You stumble across such and such.")
-    choice = simpledialog.askinteger("Choose wisely",
-                                   "You have a choice to pick: 1 or 2.")
+    messagebox.showinfo("MLG APOCALYPSE SIMULATOR 2015", "\nYou are a survivor in the apocalypse in the year 2031."
+                        "\nWWIII has happened, resulting in world wide chemical, biological"
+                        "\nand nuclear war. You stand in front of a duffle bag of money and"
+                        "\na duffle bag of gold riches. Which do you take?")
+    choice = simpledialog.askinteger("Choose wisely","\nPaper Money (1)\nGold Riches (2).")
     if choice == 1:
         choice1()
     elif choice == 2:
@@ -58,7 +59,7 @@ def choice2():
         choice2()
 
 ################ Joseph's Functions #####################
-def choice2():
+def choice3():
     choice = simpledialog.askinteger("Choose wisely",
                                      "This is the next part of the story.  Now you must choose 1 or 2 again.")
     if (choice == 1):
@@ -69,7 +70,7 @@ def choice2():
         messagebox.showinfo("The End",
                             "You chose ok.  THE END")
     else:
-        choice2()
+        choice3()
         
 ################ Main #####################
 intro()

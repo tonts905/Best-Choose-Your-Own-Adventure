@@ -88,7 +88,7 @@ def choiceMoney2():
                                       "Say you are looking for work. (2)")
      if (choice == 1):
          choiceSupplies()
-     if (choice == 2):
+     elif (choice == 2):
          choiceWork()
      else:
          choiceMoney2()
@@ -103,7 +103,7 @@ def choiceSupplies():
                                      "Accept (1)\nDecline (2)")
     if (choice == 1):
         choicePeacekeeper()
-    if (choice == 2):
+    elif (choice == 2):
         endingMoney2()
     else:
         choiceSupplies()
@@ -113,9 +113,9 @@ def choiceWork():
                                      "You say you are looking for work. He offers you a position\n"
                                      "as a 'Peackeeper', which is practically a bounty hunter.\n\n"
                                      "Accept the offer (1)\nDecline the offer (2)")
-     if (choice == 1):
+    if (choice == 1):
         choicePeacekeeper()
-    if (choice == 2):
+    elif (choice == 2):
         endingMoney2()
     else:
         choiceWork()
@@ -132,6 +132,59 @@ def choicePeacekeeper():
                         "bullets in that. Bullets are on low supply around here. If you\n"
                         "ever find some ammo lying around and want to sell it, go to\n"
                         "Joseph the gun store owner.")
+    messagebox.showinfo("Takeout",
+                        "You go to the house in the outskirts where\n"
+                        "it says he is, sneaking in through the back, crouching behind\n"
+                        "the counter. You pull our your gun, using the counter to help\n"
+                        "you aim. You shoot him once. He falls over and you walk towards\n"
+                        "his limp form, shooting him once more...eliminating your target.\n"
+                        "You search his bpdy and find ammo...but it's not for your gun.\n"
+                        "You take his ring off and his necklace, as proof of your kill. You\n"
+                        "walk back to the town, slightly shaken up. You present the proof\n"
+                        "to the sheriff, who pays you one gold coin.")
+    choice = simpledialog.askinteger("Sell",
+                                     "You go to Joseph and he asks if you want to buy more\n"
+                                     "rounds for the Peacekeeper revolver. You buy six more\n"
+                                     "rounds, spending your gold coin. He asks if you have \n"
+                                     "unneeded ammo.\n\nSell your ammo (1)\nKeep your ammo (2)")
+    if (choice == 1):
+        choicePeacekeeper2()
+    elif (choice == 2):
+        endingMoney3()
+    else:
+        choicePeacekeeper()
+
+def choicePeacekeeper2():
+    choice = simpledialog.askinteger("Next",
+                                     "You sell the rare sniper ammo, the .338 round. You obtain\n"
+                                     "10 coins from Joseph. He offers you a Tec-9 gun for sale.\n"
+                                     "\nPurchase the Tec-9 (1)\nReject the offer (2)")
+    if (choice == 1):
+        choicePeacekeeper3()
+    elif (choice == 2):
+        endingMoney4()
+    else:
+        choicePeacekeeper2()
+
+def choicePeacekeeper3():
+    messagebox.showinfo("Tec-9",
+                        "You buy the Tec-9 and two magazines for 10 coins.")
+    choice = simpledialog.askinteger("Mission",
+                                     "You go to the sheriff for another bounty. He hands you\n"
+                                     "multiple papers and says he needs you to take down a local\n"
+                                     "gang in the area that is expanding in members. They destroyed\n"
+                                     "many towns with their 'Jet' (drug), which is extremely\n"
+                                     "addictive. You see that the bounty is two gold bars, which is\n"
+                                     "worth 200 gold coins. You scout their hideout. Do you use\n"
+                                     "the bomb the sheriff gave you and take them out quickly, or\n"
+                                     "do you enter and terminate them silently?\n\nUse the C4 (1)\n"
+                                     "Silently kill each raider (2)")
+    if (choice == 1):
+        endingMoney5()
+    elif (choice == 2):
+        endingMoney6()
+    else:
+        choicePeacekeeper3()
 
 def endingMoney1():
     messagebox.showinfo("Death by Radiation",
@@ -152,13 +205,39 @@ def endingMoney2():
     restart()
 
 def endingMoney3():
+    messagebox.showinfo("Peace",
+                        "You say no and live the rest of your life peacefully in a favela\n"
+                        "style shack.")
+    messagebox.showinfo("Ending",
+                        "You reached Ending 3 of 13 endings. Ending Type: Fair")
+    restart()
     
 def endingMoney4():
+    messagebox.showinfo("Life",
+                        "You buy a house with your large amount of coins and become\n"
+                        "renowned as a wealthy man in the town. You have great power.")
+    messagebox.showinfo("Ending",
+                        "You reached Ending 4 of 13 endings. Ending Type: Mediocre")
+    restart()
     
 def endingMoney5():
+    messagebox.showinfo("Fire",
+                        "You see a crawlspace entrance on the side of the house. You\n"
+                        "manage to squeeze through...placing the C4 under a pipe. You\n"
+                        "wire it to a car battery and a receiver, then squeeze out and\n"
+                        "quickly sneak a few hundred feet away. You activate the\n"
+                        "detonator (a makeshift garage door opener), causing the house\n"
+                        "to explode a lot more violently than you expected. Debris flies\n"
+                        "everywhere as the house is enveloped in engulfing flames. You\n"
+                        "must have struck a gas line...")
+    messagebox.showinfo("",
+                        "")
+    restart()
     
 def endingMoney6():
-
+    messagebox.showinfo("Ice",
+                        "")
+    restart()
     
 ################ Main #####################
 intro()

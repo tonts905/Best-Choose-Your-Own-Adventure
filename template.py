@@ -36,6 +36,8 @@ def restart():
     if (choice == 1):
          intro()
     elif (choice == 2):
+         messagebox.showinfo("Goodbye",
+                             "Thanks for playing! Have a nice day.")
          root.destroy()
     else:
          restart()
@@ -95,8 +97,8 @@ def choiceMoney2():
 
 def choiceSupplies():
     choice = simpledialog.askinteger("Supplies",
-                                     "You say you are her for supplies. He asks you what is in\n"
-                                     "the bag over your shoulder. He searches your bad and\n"
+                                     "You say you are here for supplies. He asks you what is in\n"
+                                     "the bag over your shoulder. He searches your bag and\n"
                                      "comments on how stupid you are for having paper money.\n"
                                      "He asks if you are interested in working for him as a\n"
                                      "'Peacekeeper', which is practically a bounty hunter.\n\n"
@@ -124,11 +126,11 @@ def choicePeacekeeper():
     messagebox.showinfo("Bounty",
                         "You agree to the offer, then the sheriff hands you a paper\n"
                         "and says 'Ask me for another paper when you're done.' You\n"
-                        "look at the paper with a small picture of the target, His crime\n"
-                        "and his bounty on him in gold coins.")
+                        "look at the paper with a small picture of the target, his crime\n"
+                        "and his bounty on him, in gold coins.")
     messagebox.showinfo("Revolver",
-                        "The Sheriff hands you a Revolver known for being used by\n"
-                        "Rangers. It is full loaded. He says 'careful...there's only six\n"
+                        "The Sheriff hands you a revolver known for being used by\n"
+                        "Rangers. It is full loaded. He says 'Careful...there's only six\n"
                         "bullets in that. Bullets are on low supply around here. If you\n"
                         "ever find some ammo lying around and want to sell it, go to\n"
                         "Joseph the gun store owner.")
@@ -138,7 +140,7 @@ def choicePeacekeeper():
                         "the counter. You pull our your gun, using the counter to help\n"
                         "you aim. You shoot him once. He falls over and you walk towards\n"
                         "his limp form, shooting him once more...eliminating your target.\n"
-                        "You search his bpdy and find ammo...but it's not for your gun.\n"
+                        "You search his body and find ammo...but it's not for your gun.\n"
                         "You take his ring off and his necklace, as proof of your kill. You\n"
                         "walk back to the town, slightly shaken up. You present the proof\n"
                         "to the sheriff, who pays you one gold coin.")
@@ -187,19 +189,22 @@ def choicePeacekeeper3():
         choicePeacekeeper3()
 
 def endingMoney1():
-    messagebox.showinfo("Death by Radiation",
+    messagebox.showinfo("Radiation",
                         "Cesium gets into your body. Due to the high amount of\n"
-                        "cesium, your muscles slowly deteriorate. You collapse.\n"
-                        "You die because of the intense heat and radiation.")
+                        "cesium, your muscles slowly deteriorate.")
+    messagebox.showinfo("Death",
+                        "You collapse. You die because of the intense heat and\n"
+                        "radiation.")
     messagebox.showinfo("Ending",
                         "You reached Ending 1 of 13 endings. Ending Type: Death")
     restart()
 
 def endingMoney2():
     messagebox.showinfo("Decline",
-                        "You decline the offer. He says, 'Your loss.' You choose to stay\n"
-                        "in the town, working as a busser at the only bar. You live the\n"
-                        "rest of your boring life in this town.")
+                        "You decline the offer. He says, 'Your loss.'")
+    messagebox.showinfo("Busser",
+                        "You choose to stay in the town, working as a busser at the\n"
+                        "only bar. You live the rest of your boring life in this town.")
     messagebox.showinfo("Ending",
                         "You reached Ending 2 of 13 endings. Ending Type: Poor")
     restart()
@@ -209,7 +214,7 @@ def endingMoney3():
                         "You say no and live the rest of your life peacefully in a favela\n"
                         "style shack.")
     messagebox.showinfo("Ending",
-                        "You reached Ending 3 of 13 endings. Ending Type: Fair")
+                        "You reached Ending 3 of 13 endings. Ending Type: Mediocre")
     restart()
     
 def endingMoney4():
@@ -217,26 +222,66 @@ def endingMoney4():
                         "You buy a house with your large amount of coins and become\n"
                         "renowned as a wealthy man in the town. You have great power.")
     messagebox.showinfo("Ending",
-                        "You reached Ending 4 of 13 endings. Ending Type: Mediocre")
+                        "You reached Ending 4 of 13 endings. Ending Type: Good")
     restart()
     
 def endingMoney5():
-    messagebox.showinfo("Fire",
+    messagebox.showinfo("Chaos",
                         "You see a crawlspace entrance on the side of the house. You\n"
-                        "manage to squeeze through...placing the C4 under a pipe. You\n"
-                        "wire it to a car battery and a receiver, then squeeze out and\n"
-                        "quickly sneak a few hundred feet away. You activate the\n"
-                        "detonator (a makeshift garage door opener), causing the house\n"
-                        "to explode a lot more violently than you expected. Debris flies\n"
-                        "everywhere as the house is enveloped in engulfing flames. You\n"
-                        "must have struck a gas line...")
-    messagebox.showinfo("",
-                        "")
+                        "manage to squeeze through...placing the C4 under a pipe.")
+    messagebox.showinfo("Chaos",
+                        "You wire it to a car battery and a receiver, then squeeze out\n"
+                        "and quickly sneak a few hundred feet away.")
+    messagebox.showinfo("Chaos",
+                        "You activate the detonator (a makeshift garage door opener),\n"
+                        "causing the house to explode a lot more violently than you\n"
+                        "expected. Debris flies everywhere as the house is enveloped\n"
+                        "in engulfing flames. Youmust have struck a gas line...")
+    messagebox.showinfo("Luxury",
+                        "You go back to the town. The sheriff says, 'I could feel that\n"
+                        "explosion from here! I thought you were killed...'")
+    messagebox.showinfo("Luxury",
+                        "'Well, good work. I have no more bounties at the moment.\n"
+                        "Everything seems to be pretty calm in these parts, now that\n"
+                        "we have a fierce peacekeeper.' He hands you two gold bars,\n"
+                        "and you buy a nice place in town.")
+    messagebox.showinfo("Ending",
+                        "You reached Ending 5 of 13 endings. Ending Type: Great")
     restart()
     
 def endingMoney6():
-    messagebox.showinfo("Ice",
-                        "")
+    messagebox.showinfo("Stealth",
+                        "You sneak in, taking one out with a knife.")
+    messagebox.showinfo("Stealth",
+                        "Someone hears you. They snatch their rifle and storm into the room\n"
+                        "you are in. He shoots you.")
+    messagebox.showinfo("Stealth",
+                        "The bullet connects with your left shoulder, wounding you. You\n"
+                        "shoot him multiple times very quickly with your blowback.")
+    messagebox.showinfo("Stealth",
+                        "You move to the living room and annihilate two with your revolver.\n"
+                        "You hear several in the garage, sneaking in and hiding behind a bench.")
+    messagebox.showinfo("Stealth",
+                        "When you are sure they cannot see you, you fire at the bench, your\n"
+                        "bullets penetrate the bench and leave tennis ball sized holes in their\n"
+                        "chests.")
+    messagebox.showinfo("Stealth",
+                        "You check the house a few more times and find nobody else. Walking\n"
+                        "back into the garage, you find a stockpile of gold, drugs, and\n"
+                        "ammunition. You take the gold and ammo.")
+    messagebox.showinfo("Stealth",
+                        "You find a medical bot in the corner. You switch it to the bullet wound\n"
+                        "setting, and it puts you to sleep.")
+    time.sleep(5)
+    messagebox.showinfo("Gold",
+                        "You wake up two hours later. Fully healed, you walk back to the sheriff,\n"
+                        "carry your loot with you in a sack. He has somehow confirmed your kills.")
+    messagebox.showinfo("Gold",
+                        "He gives you the bounty of two gold bars and you live outside the\n"
+                        "town, making your own fortress with the help of your gold and the\n"
+                        "townspeople.")
+    messagebox.showinfo("Ending",
+                        "You reached Ending 6 of 13 endings. Ending Type: Second Best")
     restart()
     
 ################ Main #####################

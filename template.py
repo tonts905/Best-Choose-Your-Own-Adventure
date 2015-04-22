@@ -60,7 +60,7 @@ def choiceGold1():
 ################ Brad's Functions #####################
 
 def choicegun():
-    choice = simpledialog.askinteger("Choose wisely",
+    choice = simpledialog.askinteger("LoadoutChoice",
                                      "This is the next part of the story.  Now you must choose 1 or 2 again.")
     
     if (choice == 1):
@@ -70,45 +70,47 @@ def choicegun():
     elif (choice == 2):
         messagebox.showinfo("",
                             "")
-    elif (choice == 2):
+    else (choice == 3):
         messagebox.showinfo("You choose to take over the store with loadout 2",
                             "You load your shotgun with the provided buckshot shells, quickly aiming and firing",
                             "On the owner, instantly killing him. A guard swiftly shoots you in the back with his handgun.",
                             "You roll over, Shooting both the guards.")
+        messagebox.showinfo("You feel extreme pain from the bullet, You realize that you need intensive medical aid to survive.n\"
+                           "You catch something in the corner of the room that seems to be a medical bot.\n"
+                           "You crawl over to it, onto the gurney and it injects anesthetics into you. You fall asleep…")
+        messagebox.showinfo("When you wake up it is bright outside.")
         
 
 def choiceExplore():
         choiceExplore = simpledialog.askinteger("You take over the store. Do you choose to explore the store")
-        elif (choice == 2):
+    
 
-                                            
-                                                
 if (choice == 1):
     messagebox.showinfo("Explore",
                         "You decide to explore the store. You see a giant vault door after going down a flight of stairs.\n"
                         "You enter, Realizing theres a small bedroom in there, But seeing a huge stock pile of guns in gun cases with ammunition.\n"
-                        "Do you wish to stay in this room or leave?") 
-    elif (choice == 2 )
+                        "Do you wish to stay in this room or leave?")
+def ChoiceVault
+if (choice == 1 )
     messagebox.showinfo("Stay",
                         "You choose to stay inside the vault, Sealing yourself in.\n"
                         "You decide you need to go to the bathroom. As you start to head out you realize the door is sealed.. n\"
-                        "You stay in the vault for several days with no water before you die of dehydration."
-def choiceLeave
-if (choice == 1):
+                        "You stay in the vault for several days with no water before you die of dehydration.")
+
+(choice == 2):
     messagebox.showinfo("Leave",
                         "You choose to stock up on weapons and ammo.\n"
                         "You leave the store and continue onto amador city. While traveling to Amador city \n"
-                        "You find several mercenaries standing beside their dead employer, a caravaner. Do you hire them?"
-def ChoiceHireg
+                        "You find several mercenaries standing beside their dead employer, a caravaner. Do you hire them?)"
+def ChoiceHire
 if (choice == 1):
     messagebox.showinfo("Hire",
                         "You choose to hire the mercs despite their former employer being dead. You ask them if they would be interested in work.\n"
-                        "They agree and you give them 3 gold coins each. You walk with them until you see a small city."
+                        "They agree and you give them 3 gold coins each. You walk with them until you see a small city.")
                     
 messagebox.showinfo("Amador City",
                      "You choose to walk into the town with the mercs. You have talked about taking over for several days with them.\n"
-                     "Do you wish to take over?."
-                     messagebox.showinfo"Take over Amador City(1) Stay in the town peacefully(2)"
+                     "Do you wish to take over?Take over Amador City(1) Stay in the town peacefully(2)")
 def ChoiceAmador
 if (choice == 1):
 messagebox.showinfo("Take over",
@@ -119,14 +121,8 @@ messagebox.showinfo("Take over",
   messagebox.showinfo("Continued",
                       "You decide to take over the town. You have many of the guards on your side as well. \n"
                       "You go to the town center, Blitzkreiging it. You manage to capture several town leaders, Executing and burying them in a discreet location.\n"
-                       "The people are glad to be rid of that but not without many casualties… You are elected unanimously the leader."
-                
+                       "The people are glad to be rid of that but not without many casualties… You are elected unanimously the leader)
                     
-            
-                    
-
-
-""" Continue Joseph's functions """
 
 
 ################ Steven's Functions #####################

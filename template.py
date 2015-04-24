@@ -45,88 +45,87 @@ def restart():
             
 ################ Joseph's Fuctions #####################
 def choiceGold1():
-    choice = simpledialog.askinteger("Choose wisely",
-                                     "This is the next part of the story.  Now you must choose 1 or 2 again.")
+    messagebox.showinfo("Wise selection",
+                        "Paper money means nothing nowadays. As you have opted for the gold\n"
+                        "riches, you are a very rich man. You can afford most supplies on the way\n"
+                        "to Amador City, California.")
+    choice = simpledialog.askinteger("Drug Dealer",
+                                     "As you walk to the city, you encounter a Jamaican drug dealer\n"
+                                     "dolphin with a lead pipe. Do you fight? And when you fight, do\n"
+                                     "you praise the almighty Shrek before battles?\n\nFight w/o praying (1)"
+                                     "\nPray to Shrek before you fight (2)\nRun (3)")
     if (choice == 1):
-        messagebox.showinfo("The End",
-                            "You chose right.  THE END")
-
+        endingGold1()
     elif (choice == 2):
-        messagebox.showinfo("The End",
-                            "You chose ok.  THE END")
+        choiceGold2()
+    elif (choice == 3):
+        endingGold2()
     else:
-        choice1()
+        choiceGold1()
 
+def choiceGold2():
+    messagebox.showinfo("Battle",
+                        "Shrekalujah! You go into battles with the drug dealing scum.")
+    messagebox.showinfo("Battle",
+                        "The dolphin takes the first swing at you and misses.")
+    messagebox.showinfo("Victory",
+                        "You smell onions. Out of the corner of your eye, you see Shrek\n"
+                        "come to your aid, picking up the dolphin and tearing him to\n"
+                        "pieces.")
+    messagebox.showinfo("Proceed",
+                        "After thanking Shrek for his help, you continue towards Amador City.")
+    choice = simpledialog.askinteger("Store",
+                                     "After 40 minutes of walking, you see a store. Do you enter?\n\n"
+                                     "Yes (1)\nNo (2)")
+    if (choice == 1):
+        choiceStore1()
+    elif (choice == 2):
+        endingGold3()
+    else:
+        choiceGold2()
+
+def choiceStore1():
+    messagebox.showinfo("Chef",
+                        "The owner of the store, Chef, looks at you suspiciously, with a gun\n"
+                        "in hand. He quickly puts it away, realizing you are not a raider.")
+    choice = simpledialog.askinteger("Chef",
+                                     "Chef asks if you are looking to buy anything.\n\nYes (1)\nNo (2)")
+
+def endingGold1():
+    messagebox.showinfo("Death",
+                        "You do not pray? You get hit in the back when you are not looking,\n"
+                        "and you get shrekt. You go to Shrekven, and the almighty Shrek puts\n"
+                        "you into purgatory.")
+    messagebox.showinfo("Ending",
+                        "You have reached Ending 7 of 13 endings. Ending Type: Death")
+    restart()
+    
+def endingGold2():
+    messagebox.showinfo("Death",
+                        "The dolphin destroys you with a lead pipe, because it can use more\n"
+                        "of its brain. It outsmarts you and discovers an MLG stratz.")
+    messagebox.showinfo("Ending",
+                        "You have reached Ending 8 of 13 endings. Ending Type: Death")
+    restart()
+
+def endingGold3():
+    messagebox.showinfo("Walk",
+                        "You choose to continue your walk towards Amador City.")
+    messagebox.showinfo("Arrival",
+                        "You arrive at Amador, but you do not have enough power to take\n"
+                        "over. Instead, you buy a large house, heavily protected by traps,\n"
+                        "fencing, and is supplied with all your daily needs.")
+    messagebox.showinfo("Couch Potato",
+                        "You spend most of your time watching TV from 15 years ago...")
+    messagebox.showinfo("Ending",
+                        "You have reached Ending 9 of 13 endings. Ending Type: Fatty")
+                    
 ################ Brad's Functions #####################
 
-def choicegun():
-    choice = simpledialog.askinteger("LoadoutChoice",
-                                     "This is the next part of the story.  Now you must choose 1 or 2 again.")
-    
-    if (choice == 1):
-        messagebox.showinfo("The End",
-                            "You chose right.  THE END")
-
-    elif (choice == 2):
-        messagebox.showinfo("",
-                            "")
-    else (choice == 3):
-        messagebox.showinfo("You choose to take over the store with loadout 2",
-                            "You load your shotgun with the provided buckshot shells, quickly aiming and firing",
-                            "On the owner, instantly killing him. A guard swiftly shoots you in the back with his handgun.",
-                            "You roll over, Shooting both the guards.")
-        messagebox.showinfo("You feel extreme pain from the bullet, You realize that you need intensive medical aid to survive.n\"
-                           "You catch something in the corner of the room that seems to be a medical bot.\n"
-                           "You crawl over to it, onto the gurney and it injects anesthetics into you. You fall asleep…")
-        messagebox.showinfo("When you wake up it is bright outside.")
-        
-
-def choiceExplore():
-        choiceExplore = simpledialog.askinteger("You take over the store. Do you choose to explore the store")
-    
-
-if (choice == 1):
-    messagebox.showinfo("Explore",
-                        "You decide to explore the store. You see a giant vault door after going down a flight of stairs.\n"
-                        "You enter, Realizing theres a small bedroom in there, But seeing a huge stock pile of guns in gun cases with ammunition.\n"
-                        "Do you wish to stay in this room or leave?")
-def ChoiceVault
-if (choice == 1 )
-    messagebox.showinfo("Stay",
-                        "You choose to stay inside the vault, Sealing yourself in.\n"
-                        "You decide you need to go to the bathroom. As you start to head out you realize the door is sealed.. n\"
-                        "You stay in the vault for several days with no water before you die of dehydration.")
-
-(choice == 2):
-    messagebox.showinfo("Leave",
-                        "You choose to stock up on weapons and ammo.\n"
-                        "You leave the store and continue onto amador city. While traveling to Amador city \n"
-                        "You find several mercenaries standing beside their dead employer, a caravaner. Do you hire them?)"
-def ChoiceHire
-if (choice == 1):
-    messagebox.showinfo("Hire",
-                        "You choose to hire the mercs despite their former employer being dead. You ask them if they would be interested in work.\n"
-                        "They agree and you give them 3 gold coins each. You walk with them until you see a small city.")
-                    
-messagebox.showinfo("Amador City",
-                     "You choose to walk into the town with the mercs. You have talked about taking over for several days with them.\n"
-                     "Do you wish to take over?Take over Amador City(1) Stay in the town peacefully(2)")
-def ChoiceAmador
-if (choice == 1):
-messagebox.showinfo("Take over",
-                    "You plan to use your grand wealth to start campaigning in the town… \n"
-                    "You manage to get the several hundred people in the town behind you back but not all of them.\n"
-                    "You raid the armory in the town, getting several Omega death lasers and several plasma rifles.\n"
-                    "These are a good thing you give to your highest generals. You give the rest of the people normal guns.\n"
-  messagebox.showinfo("Continued",
-                      "You decide to take over the town. You have many of the guards on your side as well. \n"
-                      "You go to the town center, Blitzkreiging it. You manage to capture several town leaders, Executing and burying them in a discreet location.\n"
-                       "The people are glad to be rid of that but not without many casualties… You are elected unanimously the leader)
-                    
+""" Continue Joseph's functions """
 
 
 ################ Steven's Functions #####################
-                            
 def choiceMoney1():
     messagebox.showinfo("GG",
                         "Good news, you have $1,000,000 in paper money.")

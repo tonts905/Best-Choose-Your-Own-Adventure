@@ -58,73 +58,175 @@ def choiceGold1():
         choice1()
 
 ################ Brad's Functions #####################
-
 def choicegun():
-    choice = simpledialog.askinteger("LoadoutChoice",
-                                     "This is the next part of the story.  Now you must choose 1 or 2 again.")
-    
+    messagebox.showinfo("Choice",
+                        "Chef shows you the loadouts he sells.")
+    choice = simpledialog.askinteger("Choice",
+                                     "= Loadout 1 =\n+ AR-15 w/ bumpfire stock\n"
+                                     "+ M1911\n+ Combat knife\n+ Kevlar\n+ Ammunition:\n   ~ AR-15: 10 magazines (300 rounds)\n"
+                                     "   ~ M1911: 7 magazines (49 rounds)\nCost: 1 gold bar\n\n"
+                                     "= Loadout 2 =\n+ 12-Guage Shotgun\n+ .357 Revolver\n+ Stab proof vest\n"
+                                     "+ Bandolier\n+ Ammunition:\n   ~ Shotgun: 24 shells\n   ~ .357 Revolver: 36 rounds\n"
+                                     "Cost: 40 gold coins (0.4 gold bar)\n\nBuy your loadout:\nLoadout 1 (1)\nLoadout 2 (2)")
     if (choice == 1):
-        messagebox.showinfo("The End",
-                            "You chose right.  THE END")
-
+        choiceLoadout1()
     elif (choice == 2):
-        messagebox.showinfo("",
-                            "")
-    else (choice == 3):
-        messagebox.showinfo("You choose to take over the store with loadout 2",
-                            "You load your shotgun with the provided buckshot shells, quickly aiming and firing",
-                            "On the owner, instantly killing him. A guard swiftly shoots you in the back with his handgun.",
-                            "You roll over, Shooting both the guards.")
-        messagebox.showinfo("You feel extreme pain from the bullet, You realize that you need intensive medical aid to survive.n\"
-                           "You catch something in the corner of the room that seems to be a medical bot.\n"
-                           "You crawl over to it, onto the gurney and it injects anesthetics into you. You fall asleep…")
-        messagebox.showinfo("When you wake up it is bright outside.")
-        
+        choiceLoadout2()
+    else:
+        choicegun()
 
-def choiceExplore():
-        choiceExplore = simpledialog.askinteger("You take over the store. Do you choose to explore the store")
+def choiceLoadout1():
+    messagebox.showinfo("Loadout 1",
+                        "You buy Loadout 1 for 1 gold bar. You have 4 bars remaining.")
+    choice = simpledialog.askinteger("Choice",
+                                      "After you checkout your supplies, you contemplate on whether to kill\n"
+                                      "the store owner and the guards to take over the supply shop. Do you\n"
+                                      "wish to carry an attack or proceed towards the city?\n\nTake over the store (1)\n"
+                                      "Exit the store and continue walking to the city (2)")
+    if (choice == 1):
+        messagebox.showinfo("Take Over (Loadout 1)",
+                            "You attack the shop owner as soon as you get your gear.\n"
+                            "Stabbing him in the neck, you load your AR-15 and proceed\n"
+                            "to eliminate the rest of the guards, gaining control of the shop.")
+        choiceExplore()
+    elif (choice == 2):
+        ChefFarewell()
+    else:
+        choiceAttack()
+def choiceLoadout2():
+    messagebox.showinfo("Loadout 2",
+                        "You buy Loadout 2 for 40 gold coins. As you hand Chef\n"
+                        "a gold bar, he gives you back 60 coins in change.")
+    messagebox.showinfo("Money",
+                        "You have 4 bars and 60 coins remaining.")
+    choice = simpledialog.askinteger("Choice",
+                                      "After you checkout your supplies, you contemplate on whether to kill\n"
+                                      "the store owner and the guards to take over the supply shop. Do you\n"
+                                      "wish to carry an attack or proceed towards the city?\n\nTake over the store (1)\n"
+                                      "Exit the store and continue walking to the city (2)")
+    if (choice == 1):
+        messagebox.showinfo("Take Over (Loadout 2)",
+                            "You load your shotgun with the provided buckshot shells, quickly\n"
+                            "aiming and firing on Chef, instantly killing him. A guard swiftly shoots\n"
+                            "you in the back with his handgun. You roll over and shoot both the guards.")
+        messagebox.showinfo("Medical Aid",
+                            "You feel extreme pain from the bullet, and you realize\n"
+                            "that you need intensive medical aid to survive.")
+        messagebox.showinfo("Medical Bot",
+                            "You catch something in the corner of the room that seems to be a medical bot.")
+        messagebox.showinfo("Medical Bot",
+                            "You crawl over to it and onto the gurney. It\n"
+                            "injects anesthetics into you as you get drowsy...")
+        time.sleep(2)
+        messagebox.showinfo("Awake",
+                            "When you wake up it is bright outside.")
+        choiceExplore()
+    elif (choice == 2):
+        ChefFarewell()
+    else:
+        choiceLoudout2()
     
-
-if (choice == 1):
+def choiceExplore():
     messagebox.showinfo("Explore",
-                        "You decide to explore the store. You see a giant vault door after going down a flight of stairs.\n"
-                        "You enter, Realizing theres a small bedroom in there, But seeing a huge stock pile of guns in gun cases with ammunition.\n"
-                        "Do you wish to stay in this room or leave?")
-def ChoiceVault
-if (choice == 1 )
-    messagebox.showinfo("Stay",
-                        "You choose to stay inside the vault, Sealing yourself in.\n"
-                        "You decide you need to go to the bathroom. As you start to head out you realize the door is sealed.. n\"
-                        "You stay in the vault for several days with no water before you die of dehydration.")
-
-(choice == 2):
+                        "You decide to explore the shop. After seeing through it completely,\n"
+                        "you make a second pass down a flight of stairs that interested you.")
+    messagebox.showinfo("Vault",
+                        "You come across a partially open giant steel door. It appears to be a vault door.")
+    choice = simpledialog.askinteger("Vault",
+                                      "You enter the vault and find a huge stockpile of weapons in gun cases, and\n"
+                                      "ammunition. There is also a small bedroom in here. The room seals from\n"
+                                      "inside and has a small keypad on the outside. Do you wish to stay in the\n"
+                                      "room, or leave?\n\nStay (1)\nLeave (2)")
+    if (choice == 1):
+        endingGold4()
+    elif (choice == 2):
+        choiceLeave()
+    else:
+        choiceExplore()
+        
+def choiceLeave():
     messagebox.showinfo("Leave",
-                        "You choose to stock up on weapons and ammo.\n"
-                        "You leave the store and continue onto amador city. While traveling to Amador city \n"
-                        "You find several mercenaries standing beside their dead employer, a caravaner. Do you hire them?)"
-def ChoiceHire
-if (choice == 1):
+                        "You choose to stock up on weapons and ammo, and exit the vault.")
+    choice = simpledialog.askinteger("Mercs",
+                                      "You leave the store and continue onto Amador city. While traveling,\n"
+                                      "you find several mercenaries standing beside their dead employer,\n"
+                                      "a caravaner. Do you hire them?\n\nYes (1)\nNo (2)")
+    if (choice == 1):
+        choiceHire()
+    elif (choice == 2):
+        endingGold5()                
+    else:
+        choiceLeave()
+                            
+def choiceHire():
     messagebox.showinfo("Hire",
-                        "You choose to hire the mercs despite their former employer being dead. You ask them if they would be interested in work.\n"
-                        "They agree and you give them 3 gold coins each. You walk with them until you see a small city.")
-                    
-messagebox.showinfo("Amador City",
-                     "You choose to walk into the town with the mercs. You have talked about taking over for several days with them.\n"
-                     "Do you wish to take over?Take over Amador City(1) Stay in the town peacefully(2)")
-def ChoiceAmador
-if (choice == 1):
-messagebox.showinfo("Take over",
-                    "You plan to use your grand wealth to start campaigning in the town… \n"
-                    "You manage to get the several hundred people in the town behind you back but not all of them.\n"
-                    "You raid the armory in the town, getting several Omega death lasers and several plasma rifles.\n"
-                    "These are a good thing you give to your highest generals. You give the rest of the people normal guns.\n"
-  messagebox.showinfo("Continued",
-                      "You decide to take over the town. You have many of the guards on your side as well. \n"
-                      "You go to the town center, Blitzkreiging it. You manage to capture several town leaders, Executing and burying them in a discreet location.\n"
-                       "The people are glad to be rid of that but not without many casualties… You are elected unanimously the leader)
-                    
+                        "You choose to hire the mercs, despite their former employer\n"
+                        "being dead. You ask them if they would be interested in work.")
+    messagebox.showinfo("Hire",
+                        "They agree and you give them 3 gold coins each.\n"
+                        "You walk with them until you see a small city.")                  
+    choice = simpledialog.askinteger("Amador City",
+                                     "You choose to walk into the town with the mercs. You have talked\n"
+                                     "about taking over for several days with them. Do you wish to take\n"
+                                     "over?\n\nTake over Amador City (1)\nStay in the town peacefully (2)")
+    if (choice == 1):
+        endingGold7()
+    elif (choice == 2):
+        endingGold6()
+    else:
+        choiceHire()
+                            
+def endingGold4():
+    messagebox.showinfo("Stay",
+                        "You choose to stay inside the vault, sealing yourself in.")
+    messagebox.showinfo("Sealed",
+                        "You decide you need to go to the bathroom. As you start to head\n"
+                        "out, you realize the door is sealed.. You stay in the vault for\n"
+                        "several days with no water before you die of dehydration.")
+    messagebox.showinfo("Ending",
+                        "You have reached Ending 10 of 13 endings. Ending Type: Death")
+    restart()
 
-
+def endingGold5():
+    messagebox.showinfo("Wasted",
+                        "One of the mercs hears the gold clinking in your bag. He\n"
+                        "swiftly pulls out his shotgun, and blasts you. You are dead.")
+    messagebox.showinfo("Ending",
+                        "You have reached Ending 11 of 13 endings. Ending Type: Death")
+    restart()
+                        
+def endingGold6():
+    messagebox.showinfo("Busted",
+                        "A guard hears two of your mercs conversing about a possible plan at\n"
+                        "the bar. The guard comes to your house and arrests you, taking you\n"
+                        "to jail.")
+    messagebox.showinfo("Starved",
+                        "After a few weeks in jail, devoid of refreshments, you die of starvation.")
+    messagebox.showinfo("Ending",
+                        "You have reached Ending 12 of 13 endings. Ending Type: Death")
+    restart()
+                        
+def endingGold7():
+    messagebox.showinfo("Take over",
+                        "You plan to use your grand wealth to start campaigning in\n"
+                        "the town... You manage to get most several hundred people\n"
+                        "in the town behind your back, but not all of them.")
+    messagebox.showinfo("Continued",
+                        "You raid the armory, getting several Omega death lasers and several\n"
+                        "plasma rifles. You give these to your highest generals, and distribute\n"
+                        "normal guns to the people.")
+    messagebox.showinfo("Continued",
+                        "You decide to take over the town. You have\n"
+                        "many of the guards on your side as well.")
+    messagebox.showinfo("Continued",
+                        "You go into the town center, blitzkreiging it. You manage to capture\n"
+                        "several town leaders. You order them to be executed and buried in a\n"
+                        "discreet location. Not without many casualties, the townspeople are\n"
+                        "glad to be rid of them. You are unanimously elected the new leader.")
+    messagebox.showinfo("Ending",
+                        "You have reached Ending 13 of 13 endings. Ending Type: Best")
+    restart()
+                    
 ################ Steven's Functions #####################
                             
 def choiceMoney1():
